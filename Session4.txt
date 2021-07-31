@@ -1,0 +1,15 @@
+		Data			Type				FormatSpecifier		
+		=====			=====				===============
+		253				integer(decimal)		%i  or %d
+		045				integer(octal)			%i  or %o
+		0x4A			integer(hexadecimal)	%i  or %x
+
+		3.6				float					%f
+
+		'G'				character				%c
+		
+		"Chanti"		string					%s
+		
+====================================================================
+
+

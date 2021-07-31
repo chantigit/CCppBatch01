@@ -1,0 +1,90 @@
+----------------------------------------------------------------------------------------------
+										input				processing/logic							output
+										
+
+Task1: Print average of 6 numbers		num1,num2..num6		result=(num1+num2+num3+num4+num5+num6)/6	print the result
+
+Task2: Print cube of a number  			num1, result		result=	num1 * num1 * num1					print the result
+		
+Task3: Print square of a number
+
+
+	3	:	3*3*3
+
+task1.c
+=======
+/Aim: Print average of 6 numbers
+#include<stdio.h>
+void		main()
+{
+		float	num1,num2,num3,num4,num5,num6, result;
+		num1=10;
+		num2=20;
+		...
+		num6=56;
+		result=(num1+num2+num3+num4+num5+num6)/6 ;
+		printf(		"%f"	,	result	);		
+}
+
+task2.c
+=======
+//Aim: Print cube of a number 
+#include<stdio.h>
+void		main()
+{
+			float   num1,result;
+			num1=5;
+			result=num1*num1*num1;
+			printf(		"%f"	,	result	);	
+}
+
+
+
+Task4:Area of circle				area=pi*r*r
+
+	input:	pi,r
+	logic:	area=pi*r*r
+	output:	print the area
+
+Task5:Area of triangle				area=(b*h)/2
+
+Task6:Area of square				area=(s*s)
+
+Task7:Area of rectangle				area=l*w
+
+Task8:(a+b)^2						result=(a*a)+ (b*b) + (2*a*b)
+
+Task9:(a+b)^3						result=(a*a*a) + (b*b*b) + (3*a*a*b) + (3*a*b*b) 
+
+
+
+Addition of 2 numbers:
+======================
+
+#include<stdio.h>
+void		main()
+{
+	int n1,n2,result;
+	n1=10;
+	n2=55;
+	result=n1+n2;
+	printf("%d",result);
+}
+
+
+1.Register		: A register is a storage area where we can store literals(values)
+
+2.Literal		: A literal is value which is stored into the register.
+
+3.Identifier	: An identifier is name which is given to register(variable/constant)
+
+4.Varibale		: A variable is a register which literal can be varies
+
+5.Constant		: A constant is a register which literal cannot be varies
+
+
+box1,box2 		are registers
+pizza,shoes		are literals
+stocker on box1,box2 are identifiers
+box1 is a variable
+box2 is a constant

@@ -1,0 +1,63 @@
+uber eats
+
+	Harish has ordered 4 items
+	
+	Welcome Mr Harish & your invoice is:
+	
+			ItemName		Quantity     Price				Total of item
+			
+		1.  nons   			5				50					250
+		2.  chiken biryani	1				450					450
+		3.	ice cream		2				150					300
+		
+		
+												Total   	: 1000
+												Coupon50	:	50
+												CRTMS		:	5%
+												packaging 	: 	50
+												delivery	: 	150
+												GST			:	16%
+												
+										Total Bill			:	
+										
+	1.Addition of 2 numbers
+	2.Sub of 2 numbers
+	3.Multiplication of 2 numbers
+	4.Division of 2 numbers
+============================================================================================
+
+-------------------------------------------------------------------------
+		itemcost1,itemcost2,itemcost3,quantity1,quantity2,quantity3
+		Coupon50,CRTMS,PACKAGING,DELIVERY,GST
+-------------------------------------------------------------------------
+		itemcost1	= 	50 
+		quantity1	=	5
+		itemcost2	=	450
+		quantity2	=	1
+		itemcost3	=	150
+		quantity3	=	3
+		
+		Coupon50 	= 	50
+		CRTMS	 	=	5
+		PACKAGING	=	50
+		DELIVERY	= 	150
+		GST			=	18
+-------------------------------------------------------------------------		
+		total  =  (itemcost1*quantity1) + (itemcost2*quantity2) + (itemcost3*quantity3)
+		
+		totalwithcoupon = total - Coupon50
+		
+		totalwithcrtms=((100-CRTMS)*totalwithcoupon) / 100
+		
+		totalwithpacking=totalwithcrtms + PACKAGING
+		
+		totalwithdelivery=totalwithpacking + DELIVERY
+		
+		totalwithgst = ((100 + GST )* totalwithdelivery )/ 100
+-------------------------------------------------------------------------
+		display totalwithgst to customer
+-------------------------------------------------------------------------	
+		
+		
+		
+										

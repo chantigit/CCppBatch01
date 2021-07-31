@@ -1,0 +1,98 @@
+________________________________________________________________________________________________
+
+	function name		use of function
+	=============		===============
+	1.main() 			Code execution starts from this function
+	2.printf()			Used to Write data into console screen
+	3.clrscr()			Erase the previous output from the console screen
+	4.getch()			runs the code after compilation
+	5.sizeof()			returns size of the datatype
+	6.scanf()			Used to Read data from console screen
+	
+syntax of printf():
+===================
+	printf (	"FORMATSPECIFIER"    ,   data1,data2,data3,....			);
+
+Ex1:Write 3 person ages into console screen
+
+	int		age1,age2,age3;
+	age1=14;
+	age2=15;
+	age3=15;
+	printf(		"%d%d%d"			, 	age1,age2,age3);
+
+Ex2:Write 2 person heights into console screen
+
+	float	height1,height2;
+	height1=5.8;
+	height2=5.4;
+	printf(  "%f%f"	, height1,height2 );
+	
+
+syntax of scanf():
+===================
+	scanf (	"FORMATSPECIFIER"    ,   &data1, &data2, &data3,....			);
+	
+Ex1:Read atm pin from console & write into console screen
+
+		int		atm_pin;
+		//Read atm pin from console
+		printf(	"Enter your pin:"	);
+		scanf(	"%d"	, &atm_pin		);
+		//write into console screen
+		printf(  "Your pin is: %d ",atm_pin);
+	
+Ex2:Read your age from console & write into console screen
+
+		int age;
+		printf("Enter your age:");
+		scanf( "%d", &age);
+		printf( "Your age is: %d", age);
+
+Ex3:Read 2 numbers from console & write their sum into console screen
+Task10.c:
+=========
+//Code1
+	int num1, num2,result;
+	printf ("Enter your first number:");
+	scanf ("%d" , &num1);
+	printf ("Enter your second number:");
+	scanf ("%d" , &num2);
+	result=(num1+num2);
+	printf ("Addition is: %d", result);
+	
+//Code2
+	int num1,num2,result;
+	printf("Enter Your Two Numbers:);
+	scanf("%d%d",&num1,&num2);
+	result=num1+num2;
+	printf("Your Addition Is: %d", result);
+
+Ex4:Read 3 numbers from console & write their average into console screen
+Task11.c:
+=========
+Code1:
+
+float num1, num2, num3, result;
+printf ("Enter your first number:");
+scanf ("%f" , & num1);
+printf ("Enter your second number:");
+scanf ("%f" , & num2);
+printf ("Enter your third number:");
+scanf ("%f" , & num2);
+result=(num1+num2+num3)/3;
+printf ("your average is: &f", result);
+
+
+Code2:
+
+float  num1,num2,num3,average;
+printf("enter your three numbers:");
+scanf("%f%f%f", &num1,&num2,&num3);
+average=(num1+num2+num3)/3;
+printf("your average is: "%f",average);
+
+
+Task12.c:
+=========
+Read 8 subject marks from console & write their total,average into console screen

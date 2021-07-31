@@ -1,0 +1,93 @@
+1.Register		: A register is a storage area where we can store literals(values)
+
+2.Literal		: A literal is value which is stored into the register.
+
+3.Identifier	: An identifier is name which is given to register(variable/constant)
+
+4.Varibale		: A variable is a register which literal can be varies
+
+5.Constant		: A constant is a register which literal cannot be varies
+
+________________________________________________________________________________________________
+
+	function name		use of function
+	=============		===============
+	1.main() 			Code execution starts from this function
+	2.printf()			Used to Print / Write data into console screen
+	3.clrscr()			Erase the previous output from the console screen
+	4.getch()			runs the code after compilation
+	
+
+1.Literal types:
+++++++++++++++++
+	1.Integer  literals				=	25,69,78,..
+	2.Float literals				=	9.8,3.14,5.8,..
+	3.Character literals			=	'A','a','@',...
+	4.String literals				=	"Ajay","Apple",..
+
+2.Identifier rules:
++++++++++++++++++++
+An identifier can be formed by using following character set.
+	1.Alphabets			:	A,...Z,  a,..z
+	2.Digits			:	0,..9
+	3.Special symbol	:	_
+
+	DataTypes	Identifiers
+	=========	==============
+	int  		num1;
+	int			age;
+	float		height;
+	int     	sub1,sub2,sub3,sub4;
+	int     	cvv_number;
+	int			atm_pin;
+	
+	int 		1num;					//invalid=>An identifier should not starts with a digit
+	int 		sub1 sub2 sub3 sub4;	//invalid=>Multiple identifiers must be separated by comma not by space
+	int			cvv#number;				//invalid=>An identifier should allow only _ (underscore)
+
+3.Varibale	:
+	syntax:
+			datatype  	variablename;
+	example:
+			float		radius;
+			float		height;
+			int 		age;
+		
+4.Constant 	:
+	syntax:
+			const	datatype  	variablename=value;
+	example:
+			const   float 		pi		=3.14;
+			const	float		gravity	=9.8;
+			const   float		cgst	=9;
+			
+5.Keywords :
+	It is reserved word which meaning already defined by compiler(turboc++).
+	C language having 32 keywords
+	
+Ex1: "const" 	is a keyword, reserved for declare constants
+Ex2: "int" 		is a keyword, reserved for  declare integers
+Ex3: "float" 	is a keyword, reserved for declare float
+Ex4: "if" 		is a keyword, reserved for test the condition
+Ex5: "char" 	is a keyword, reserved for declare characters
+
+6.DataTypes:
+============
+Def:
+	DataTypes are used to decide "what type of value has to be stored inside the register".
+Ex1:
+	int		a;	//Here a is declared with "int" type,so that it can hold only integer.
+		a=10;	//valid
+		a=3.6;	//invalid
+		
+	float	b;	//Here b is declared with "float" type,so that it can hold only float+int.
+		b=3.6;	//valid
+		b=6;	//valid
+		b='A';	//invalid
+		
+	char   c;	//Here c is declared with "char" type,so that it can hold only characters.
+		c='A';	//valid
+		c=9.8888;//invalid
+		
+Types of DataTypes:
+===================

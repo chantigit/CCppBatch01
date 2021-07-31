@@ -1,0 +1,30 @@
+________________________________________________________________________________________________
+
+	function name		use of function
+	=============		===============
+	1.main() 			Code execution starts from this function
+	2.printf()			Used to Print / Write data into console screen
+	3.clrscr()			Erase the previous output from the console screen
+	4.getch()			runs the code after compilation
+	5.sizeof()			returns size of the datatype
+	
+Escape Sequences:
+==================
+	\n   =  new line
+	\t   =  tab
+
+	Primitive Datatypes		Format Specifier		Size
+	-------------------		----------------		----
+	1.int					%i (%d,%o,%x)			2 bytes   = 16 bits	= 2^16 = 65536  => -323768 to 32767
+	
+	2.float					%f						4 bytes   = 32 bits
+	
+	3.char					%c						1 byte	  = 8 bits   = 2^8  = 256    => 0  to 255 (ASCII)
+	
+	4.pointers				%p						2 bytes
+	
+	
+	int  a;  //a can store min value is  -323768 and max 32767
+	
+	a=45000;
+	

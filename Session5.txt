@@ -1,0 +1,43 @@
+PS1: Print Hello message on console screen
+
+app1.c
+
+#include<stdio.h>
+void main()
+{
+	printf("HELLO");
+}
+
+
+PS2:Print your age into console screen
+
+app2.c
+
+#include<stdio.h>
+void main()
+{
+	int   myage;
+	myage=14;
+	printf(	 "%d"		,	myage		);
+}
+
+PS3:Print your height into console screen
+
+app3.c
+#include<stdio.h>
+void main()
+{
+	float 	myheight;
+	myheight=5.9;
+	printf( "%f" , myheight);
+}
+
+
+
+
+
+
+
+
+
+
