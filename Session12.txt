@@ -1,0 +1,119 @@
+________________________________________________________________________________________________
+
+	function name		use of function
+	=============		===============
+	1.main() 			Code execution starts from this function
+	2.printf()			Used to Write data into console screen
+	3.clrscr()			Erase the previous output from the console screen
+	4.getch()			runs the code after compilation
+	5.sizeof()			returns size of the datatype
+	6.scanf()			Used to Read data from console screen
+	
+
+Task13.c:	Area of cirlce
+Task14.c:	Area of square
+Task15.c:	Area of rectangle
+Task16.c:	Area of triangle
+=========================================================================================
+Operators:
+==========
+Def:
+	Operators are used between operands to perform a specific operation.
+
+	result=num1+num2;
+	
+	result,num1,num2		=>	OPERANDS
+	
+	=,+,;					=>	OPERATORS
+
+Expression	=		Collection of operands & operators.
+
+
+Types of operators:
+
+	1.Unary operators	(a++)
+	2.Binary operators	(a+b)
+	3.Ternary operators	(a?b:c)
+
+1.Unary operators:
+	1.Unary increment(++)
+	2.Unary decrement(--)
+	3.Unary minus (-)
+
+2.Binary operators:
+	1.Assignment  	(=)
+	2.Arithmetic	(+,-,*,/,%)
+	3.Relational	(<,>,<=,>=,!=,==)
+	4.Logical		(&&,||,!)
+	5.Bitwise		(&,|,^,~,<<,>>)
+
+3.Ternary operators
+	1.Conditional 	(?:)
+-----------------------------------------------------------------
+1.Unary increment(++):
+2.Unary decrement(--):
+3.Unary minus (-)
+
+operator1.c:
+============
+
+	int		a,b,c,d,e;
+	
+	a=10;
+	b=20;
+	c=30;
+	d=40;
+	e=-50;
+	printf(	"%d\n",	++a	);	//pre increment 	= 11
+	printf(	"%d\n",	--b	);  //pre decrement 	= 19
+	printf(	"%d",	c++	);	//post increment	= 30
+	printf(	"%d",	c	);	//31
+	printf(	"%d",	d--	);	//post decrement	= 40
+	printf(	"%d",	d	);	//39
+	printf(	"%d",	-e	);	//50
+
+operator2.c:
+============		
+	j=8;
+	printf(	"%d",	(j++  + 	++j)	);
+
+operator3.c:
+============		
+	k=90;
+	printf(	"%d",	(--k  + 	k--)	);
+
+operator4.c:
+============		
+	l=100;
+	printf(	"%d",	(l++  +   --l  +   ++l   +  l--)	);
+
+
+1.Assignment  	(=):
+====================
+	Used to assign the value to variables.
+	
+operator5.c:
+============	
+	int a,b,c,d,e;
+	a=10;
+	b=c=100;
+	d=a+b;
+	//swapping
+	printf("a=%d, b=%d",a,b);	//a=10,b=100
+	e=a;	//e=10
+	a=b;	//a=100
+	b=e;	//b=10
+	printf("a=%d, b=%d",a,b);	//a=100,b=10
+
+
+
+
+
+
+
+
+
+
+
+
+
