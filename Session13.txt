@@ -1,0 +1,144 @@
+=========================================================================================
+Operators:
+==========
+Def:
+	Operators are used between operands to perform a specific operation.
+
+	result=num1+num2;
+	
+	result,num1,num2		=>	OPERANDS
+	
+	=,+,;					=>	OPERATORS
+
+Expression	=		Collection of operands & operators.
+
+
+Types of operators:
+
+	1.Unary operators	(a++)
+	2.Binary operators	(a+b)
+	3.Ternary operators	(a?b:c)
+
+1.Unary operators:
+	1.Unary increment(++)
+	2.Unary decrement(--)
+	3.Unary minus (-)
+
+2.Binary operators:
+	1.Assignment  	(=)
+	2.Arithmetic	(+,-,*,/,%)
+	3.Relational	(<,>,<=,>=,!=,==)
+	4.Logical		(&&,||,!)
+	5.Bitwise		(&,|,^,~,<<,>>)
+
+3.Ternary operators
+	1.Conditional 	(?:)
+-----------------------------------------------------------------
+
+2.Arithmetic	(+,-,*,/,%)
+
+operator6.c:
+============
+
+	int		a,b;
+	a=10;
+	b=3;
+	printf(	"%d\n",	(a+b)	);		//13
+	printf(	"%d\n",	(a-b)	);		//7
+	printf(	"%d\n",	(a*b)	);		//30
+	printf(	"%d\n",	(a/b)	);		//q = 3
+	printf(	"%d\n",	(a%b)	);		//r = 1
+	
+
+operator7.c:	(Convert total time into hours & minutes)
+============
+	int		n=153;
+	printf(	"%d\n",	(n/60)	);		//2
+	printf(	"%d\n",	(n%60)	);		//33
+
+operator8.c:	(Convert total days into months & days)
+============
+	int		n=143;
+	printf(	"%d\n",	(n/30)	);		//4
+	printf(	"%d\n",	(n%30)	);		//23
+
+
+Task17:Find simple interest
+
+3.Relational	(<,>,<=,>=,!=,==):
+=================================
+
+
+operator9.c:
+============
+
+	int		a,b;
+	a=10;
+	b=3;
+	
+	printf(	"%d\n",	(a>b)	);	//1
+	printf(	"%d\n",	(a<b)	);	//0
+	printf(	"%d\n",	(a>=b)	);	//1
+	printf(	"%d\n",	(a<=b)	);	//0
+	printf(	"%d\n",	(a!=b)	);	//1
+	printf(	"%d\n",	(a==b)	);	//0
+
+operator10.c:	(Checking age is valid for voting or not)
+============
+	int 	age;
+	age=25;
+	if (age >18)
+		printf("Valid for voting");
+	else
+		printf("Invalid for voting");
+	
+
+operator11.c:	(Checking number is positive or negative)
+============
+	int 	num;
+	num=25;
+	if ( num >0  )
+		printf("Your number is positive");
+	else
+		printf("Your number is negative");
+
+Task18:Checking number is even or odd
+
+operator12.c:	(Biggest of two numbers)
+============
+	int 	num1,num2;
+	num1=25;
+	num2=45;
+	if ( num1 > num2 )
+		printf("number1 is big");
+	else
+		printf("number2 is big");
+
+
+4.Logical		(&&,||,!):
+===========================
+	Used between two or more conditions
+	
+					and			or			not
+	C1		C2		C1&&C2		C1||C2		!C1		!C2
+	
+	1		1		1			1			0		0
+	1		0		0			1			0		1
+	0		1		0			1			1		0
+	0		0		0			0			1		1
+
+operator13.c:	(Biggest of three numbers)
+============
+	int 	num1,num2,num3;
+	num1=25;
+	num2=45;
+	num3=10;
+	if ( num1 > num2  &&  num1 > num3 )
+		printf("number1 is big");
+	else if(num2>num3)
+		printf("number2 is big");
+	else
+		printf("number3 is big");
+
+Task19:Checking Biggest of four numbers
+Task20:Checking Smallest of five numbers0
