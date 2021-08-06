@@ -1,0 +1,150 @@
+=========================================================================================
+Operators:
+==========
+Def:
+	Operators are used between operands to perform a specific operation.
+
+	result=num1+num2;
+	
+	result,num1,num2		=>	OPERANDS
+	
+	=,+,;					=>	OPERATORS
+
+Expression	=		Collection of operands & operators.
+
+
+Types of operators:
+
+	1.Unary operators	(a++)
+	2.Binary operators	(a+b)
+	3.Ternary operators	(a?b:c)
+
+1.Unary operators:
+	1.Unary increment(++)
+	2.Unary decrement(--)
+	3.Unary minus (-)
+
+2.Binary operators:
+	1.Assignment  	(=)
+	2.Arithmetic	(+,-,*,/,%)
+	3.Relational	(<,>,<=,>=,!=,==)
+	4.Logical		(&&,||,!)
+	5.Bitwise		(&,|,^,~,<<,>>)
+
+3.Ternary operators
+	1.Conditional 	(?:)
+-----------------------------------------------------------------
+5.Bitwise		(&,|,^,~,<<,>>):
+==============================
+	& 			and
+	|			or
+	^			xor
+	~			complement
+	<<			left shift
+	>>			right shift
+operator14.c:	
+============
+		int	a=9,b=13;
+		
+		printf("%d\n" , (a&b) );		//9
+		printf("%d\n" , (a|b) );		//13
+		printf("%d\n" , (a^b) );		//4
+		printf("%d\n" , (~a) );			//-10
+		printf("%d\n" , (~b) );			//-14
+
+
+Task21:
+
+
+3.Ternary operators:
+====================
+	1.Conditional 	(?:)
+syntax:
+
+	condition	?		statement1	:	statement2	;
+	
+Example:
+
+#include <stdio.h>
+
+void main() {
+            int	a=-90,b=13;
+		
+			printf("%d\n" , (a>b)   ? a :  b      );	
+		
+			printf("%c\n" , (a%2==0)   ? 'E' :  'O'     );
+
+			printf("%s\n" , (a>0)   ? "POS" :  "NEG"     );	
+
+   
+}
+=========================================================================================
+Control Statements:
+==================
+	1.Decision Making Statements
+			1.if
+			2.if-else
+			3.nested-if-else
+			4.switch
+	
+	2.Loop Statements
+			1.while
+			2.do-while
+			3.for
+	
+	3.Jump Statements
+			1.break
+			2.goto
+			3.continue
+=========================================================================================
+1.if:
+=====
+	Used to test the condition & execute the statements if condition is true/1
+
+syntax1:
+		if(condition)
+		{
+			statement1
+			statement2
+			statement3
+			....
+		}
+syntax2:
+		if(condition)
+			statement
+Example:
+	int a=30;
+    if(a>0)
+    {
+        printf("%d is positive",a);
+    }
+2.if-else:
+==========
+	Used to test the condition & execute the statements if condition is true/1 & false/0
+
+syntax1:
+		if(condition1)
+		{
+			statement1
+			statement2
+		}
+		else
+		{
+			statement3
+			statement4
+		}
+syntax2:
+		if(condition)
+			statement1
+		else
+			statement2
+Example:
+	int a=-5;
+    if(a>0)
+    {
+        printf("%d is positive",a);
+    }
+	else
+	{
+        printf("%d is negative",a);
+    }
