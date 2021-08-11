@@ -1,0 +1,161 @@
+
+do-while loop:
+==============
+It is same as while loop with 2 difference
+ 1.In while, first condition is tested then statements gets executed
+  where as in do-while first statements gets executed then condition is tested
+ 2.In while, if condition is fails first time then none of statements gets executed
+  where as in do-while even if condition is fails first time ONCE statements gets executed
+
+
+while syntax:
+=============
+Initialization;
+while(condition)
+{
+ statements;
+ inc/dec;
+}
+
+do-while syntax:
+=============
+Initialization;
+do
+{
+ statements;
+ inc/dec;
+}while(condition);
+
+PS1:Print 0,2,4,6,8,10
+Code:
+ int i=0;
+    do{
+        printf("%d\n",i);
+        i=i+2;
+    }while(i<=10);
+ 
+ 
+1,2,..10    20,19,...10     10,8,6,4,2,0   1,3,5,7,9     3,6,9,...30   50,45,40,...1
+
+dowhile1.c   ...   dowhile6.c   
+
+-----------------------------------------------------------------------------------------------
+
+
+for loop:
+=========
+syntax:
+ 
+ Declaration;
+ for ( Initialization ; Condition ; Inc/Dec)
+ {
+  Statements
+ }
+
+
+1,2,..10    
+20,19,...10     
+10,8,6,4,2,0   
+1,3,5,7,9     
+3,6,9,...30   
+50,45,40,...1
+
+for1.c .... for6.c
+
+PS1:Print 0,2,4,6,8,10
+ int  i;
+ for (i=0 ; i<=10 ; i=i+2)
+ {
+  printf("%d\n",i);
+ }
+R1:
+ int i;
+ for (i=1;i<=10;i++)
+ {
+  printf("%d\n",i);
+ }
+R2:
+ int i;
+ for(i=20;i>=10;i--)
+ {
+  printf("%d\n",i);
+ }
+R3:
+ int i;
+ for(i=10;i>=0;i=i-2)
+ {
+  printf("%d\n",i);
+ }
+R4:
+ int i;
+ for(i=1;i<=9;i=i+2)
+ {
+  printf("%d\n",i);
+ }
+R5:
+ int i;
+ for(i=3;i<=30;i=i+3)
+ {
+  int i;
+ for(i=10;i>=0;i=i-2)
+ {
+  printf("%d\n",i);
+ }
+
+
+
+Jump Statements:
+================
+1.break  : When program control reach break, then loop execution terminated completely
+2.continue : When program control reach continue, then loop execution terminated only once
+3.goto  : It allow program control to jump to a specific statement
+
+break1.c:
+
+ int i;
+ for (i=1;i<=10;i++)
+ {
+  if(i==5)
+      break;
+ else
+  printf("%d\n",i);
+ }
+
+continue1.c:
+
+
+ int i;
+ for (i=1;i<=10;i++)
+ {
+  if(i==5)
+      continue;
+ else
+  printf("%d\n",i);
+ }
+
+goto1.c
+
+ int num=5,i=0;
+ 
+ abc:
+ printf("%d\t",(num*i));  //0   5  10 
+ i++;
+ if(i<=10)
+ goto abc;
+
+
+
+
+1.Keyword
+2.Datatype
+3.Variable Vs Constant
+4.Literals types
+5.Identifiers rules
+6.Operators
+7.printf() & scanf()
+8.Control Statements
+ 1.Decision Making
+ 2.Loop
+ 3.Jump
+
+	
