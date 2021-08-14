@@ -1,0 +1,70 @@
+PS1:Average of 3 numbers			(fun2.c)
+PS2:Find area of circle			(fun3.c)
+fun4.c			Print area of triangle
+fun5.c			Print cube of a number
+fun6.c			Check given number is even or odd
+fun7.c			Check given number is positive or negative
+=========================================================================
+								return type 								parameter list
+								Output Type			FunctionName			Input list		
+		
+R1:Addition of 2 numbers		float				add()					float n1,float n2
+
+R2:Print area of triangle		float				areaoftrinagle()		float base,float height
+
+R3:Print simple interest		float				interest()				float p,float t,float r		
+
+R4:Print cube of a number		float				cube()					float n		
+
+R5:Print average of 3 numbers	float				average()				float n1,float n2,float n3	
+
+	
+Function Preparation ways:
+==========================
+A funncion can be prepared in 4 ways based on "return type" & "parameter list".
+
+	1.With "return type" 	(return)& WIth "parameter list"
+	2.With "return type" 	(return)& Without "parameter list"
+	3.Without "return type"(void)	& WIth "parameter list"
+	4.Without "return type"(void) 	& Without "parameter list"
+	
+fun8.c:Addition of 2 numbers 
+		//2 headerfiles
+		//1.With "return type" 	(return)& WIth "parameter list"
+		float add1(float n1,float n2)
+		{
+			float result;
+			result=n1+n2;
+			return result;		
+		}
+		//2.With "return type" 	(return)& Without "parameter list"
+		float add2()
+		{
+			float n1=8,n2=9,result;
+			result=n1+n2;
+			return result;	
+		}
+		//3.Without "return type"(void)	& WIth "parameter list"
+		void  add3(float n1,float n2)
+		{
+			float result;
+			result=n1+n2;
+			printf("\nSum3=%f",result);		
+		}
+		//4.Without "return type"(void) 	& Without "parameter list"
+		void  add4()
+		{
+			float n1=8,n2=3,result;
+			result=n1+n2;
+			printf("\nSum4=%f",result);	
+		}
+		void main()
+		{
+			float t1=add1(9,10);
+			printf("\nSum1=%f",t1);		//19
+			float t2=add2();
+			printf("\nSum2=%f",t2);		//17
+			add3(4,10);					//14
+			add4();						//11
+		}
+	
