@@ -1,0 +1,113 @@
+Recursion:
+=========
+Calling a function itslef is called as Recursion.
+
+Ex1:
+
+#include <stdio.h>
+void sayHi()    //Called
+{
+    printf("Hi Ajith\n");
+    sayHi();    //Calling function itself
+}
+int main() {
+    sayHi();    //Calling
+    return 0;
+}
+
+Ex2:
+
+#include <stdio.h>
+int fact(int n)    //Called
+{
+    if(n==1)
+        return n;
+    else
+        return n*fact(n-1);//Calling itself
+}
+int main() {
+    int num=6;
+    int r=fact(num);
+    printf("%d",r);
+    return 0;
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Pointers:
+=========
+A pointer is a variable which holds the address of another variable.
+
+A pointer can be declared by using "*" operator.
+
+syntax:
+		datatype		*variablename;
+
+Ex1:
+#include <stdio.h>
+int main() {
+    int n1=6,n2=6,n3=100;
+    int *p1,*p2,*p3;
+    p1=&n1;			//Assigning n1 address to p1 pointer variable
+    p2=&n2;			//Assigning n2 address to p2 pointer variable
+    p3=&n3;			//Assigning n3 address to p3 pointer variable
+    printf("%d \n",n1);
+    printf("%d \n",n2);
+    printf("%d \n",n3);
+    printf("%d \n",&n1);
+    printf("%d \n",&n2);
+    printf("%d \n",&n3);
+    printf("%d \n",p1);
+    printf("%d \n",p2);
+    printf("%d \n",p3);
+    return 0;
+}	
+
+Note:
+
+We use %p format specifier to print the address 
+
+Ex2:
+
+#include <stdio.h>
+int main() {
+    int n1=6,n2=6,n3=100;
+    int *p1,*p2,*p3;
+    p1=&n1;
+    p2=&n2;
+    p3=&n3;
+    printf("%d \n",n1);
+    printf("%d \n",n2);
+    printf("%d \n",n3);
+    printf("%p \n",&n1);
+    printf("%p \n",&n2);
+    printf("%p \n",&n3);
+    printf("%p \n",p1);
+    printf("%p \n",p2);
+    printf("%p \n",p3);
+    return 0;
+}
+
+Note:
+
+1.Single pointer variable holds address of an variable
+2.Double pointer variable holds address of another address
+
+Ex3:
+
+#include <stdio.h>
+int main() {
+    int n1=6;
+    int *p1;    //Single pointer variable
+    int **p2;   //Double pointer variable
+    p1=&n1;
+    p2=&p1;
+    printf("%d \n",n1);
+    printf("%p \n",&n1);
+    printf("%p \n",p1);
+    printf("%p \n",&p1);
+    printf("%p \n",p2);
+    printf("%d \n",*p1);     //Value with in that address
+    printf("%p \n",*p2);     //Value with in that address
+    printf("%d \n",**p2);    //Value with in that address
+    return 0;
+}
