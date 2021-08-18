@@ -1,0 +1,193 @@
+Call by value & Call by address:
+=================================
+Program1: Call by value 
+
+#include <stdio.h>
+void show(int a)
+{
+    a=a+10;
+    printf("\ninside show(): a= %d",a);
+}
+int main() 
+{
+    int m=100;
+    show(m);		//Call by value
+    printf("\ninside main(): m= %d",m);
+    return 0;
+}
+
+
+Program2: Call by address
+
+#include <stdio.h>
+void show(int *a)
+{
+    *a=*a+10;
+    printf("\ninside show(): a= %d",*a);
+}
+int main() 
+{
+    int m=100;
+    show(&m);  //Call by address
+    printf("\ninside main(): m= %d",m);
+    return 0;
+}
+================================================================
+Arrays:
+======
+Def:
+	Array is a collection of similar/homogeneous data elements.
+
+	->Array elements are accessed by index
+	->Array index starts from ZERO & ends with size-1 location
+	->Array variale stores address of first element
+
+
+Types of arrays:
+
+		1.One Dimensional Arrays			: Elements are organized in row passion
+		2.Two or Multi Dimensional Arrays	: Elements are organized in row & column passion
+		
+1.One Dimensional Arrays Example:
+=================================
+R1: Store my family members ages		: Collection/Array of 	integeres
+R2: Store my family members heights		: Collection/Array  of 	floats
+R3: Store 6 subjects marks				: Collection/Array  of 	integeres
+R4: Store 5 students grades				: Collection/Array  of 	characters  =>Strings
+
+I.How to declare 1-D array ?
+
+syntax:		datatype		arrayname[size];
+
+II.How to initialize 1-D array ?
+
+syntax:		arrayname[index1]=value1;
+			arrayname[index2]=value2;
+			....
+
+III.How to access elements from 1-D array ?
+		
+			arrayname[index1]
+			arrayname[index1]
+		
+Code for R1:(array1.c)
+		
+#include <stdio.h>
+int main() 
+{
+            int 			ages[3];
+            int i;
+			ages[0]=32;
+			ages[1]=28;
+			ages[2]=2;
+			for(i=0 ; i<=2 ;i++)
+			{
+			    printf("%d\n",ages[i]);
+			}
+    return 0;
+}
+	
+
+Tasks:  array1.c  array2.c   array3.c  array4.c
+
+
+
+2.Two or Multi Dimensional Arrays:
+==================================
+
+I.How to declare 2-D array ?
+
+syntax:		datatype		arrayname[rowsize][columnsize];
+
+II.How to initialize 2-D array ?
+
+syntax:		arrayname[rowindex1][columnindex1]=value1;
+			arrayname[rowindex2][columnindex2]=value2;
+			...
+III.How to access elements from 2-D array ?
+		
+			arrayname[rowindex1][columnindex1]
+			arrayname[rowindex2][columnindex2]
+Design1:
+
+
+#include <stdio.h>
+int main() 
+{
+    int   matrix1[3][2];
+    int r,c;
+	matrix1[0][0]=1;
+	matrix1[0][1]=2;
+	matrix1[1][0]=3;
+	matrix1[1][1]=4;
+	matrix1[2][0]=5;
+	matrix1[2][1]=6;	
+	for(r=0;r<=2;r++)           //Outer for loop => ROW     0  1   2
+	{
+	    for(c=0;c<=1;c++)       //Inner for loop => COLUMN  01 01  01
+	    {
+	        printf("%d\t",matrix1[r][c]);
+	    }
+	    printf("\n");
+	}
+    return 0;
+}
+
+Tasks:  array5.c (D2) array6.c (D3)  array7.c(D4)  array8.c(D5)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Strings:
+=========
+Def:
+	Group/Sequence/Collection/Array  of 	characters is called as String.
+	
+1.Declaring String:
+
+	syntax1:	char	arrayname[size] =  {'char1','char2','char3',....};
+	
+	Ex:
+				char     myname[7]= {'C','h','a','n','t','i','\0'};
+				
+	syntax2:	char	arrayname[size] =  "characters";
+	
+	Ex:
+				char     myname[6]="Chanti";
+
+	
+
+2.String handling functions:
+
+1.strlwr()		=> Convert string into lower case
+2.strupr()		=> Convert string into upper case
+3.strlen()		=> Return no of characters in a string
+4.strcpy()		=> Returns copy of string
+5.strcat()		=> Concatenate two string
+6.strcmp()		=> Compare two strings
+7.strrev()		=> Returns characters in reverse order
+
+Note:
+
+All above 7 functions are belongs to string.h headerfile
+
+Example:
+
+#include<stdio.h>
+#include<string.h>
+void main() 
+{
+    char name1[10]="Men",name2[50];
+	char s1[10]="Apple",s2[10]="apple",s3[10]="Apple";
+    printf("name1=  %s \n",name1);
+    strlwr(name1);
+    printf("after lwr:: name1=  %s \n",name1);
+	strupr(name1);
+    printf("after upr:: name1=  %s \n",name1);
+	printf("length of name1  =  %d \n",strlen(name1));
+	strcat(name1," is a Human being");
+	printf("after cat:: name1=  %s \n",name1);
+	strcpy(name2,name1);
+	printf("after copy:: name2=  %s \n",name2);
+	printf("compare s1 & s2:  %d\n",strcmp(s1,s2));   //-32
+	printf("compare s1 & s3:  %d\n",strcmp(s1,s3));   //0
+	printf("compare s2 & s1:  %d\n",strcmp(s2,s1));   //32
+	printf("reverse of s2= %s",strrev(s1));
+}
