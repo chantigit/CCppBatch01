@@ -1,0 +1,230 @@
+
+Array is a collection of similar/homogeneous data elements.
+
+Ex:	
+	int   array1[5]		={10,20,30,40,50};
+	int   array2[2][2]	={{1,2},{3,4}};
+	
+
+	int   array3[3]		={21,5.9,"Arjun"};
+	
+Here array3 is trying to storing heterogenous data elements but according to array rule, 
+array can always stores homogeneous elements only.
+
+Q1.How do we store heterogenous elements ?
+Ans:
+	Using structures we can store heterogenous elements.
+	
+
+Structures:
+===========
+	It is similar to array but stores heterogenous elements.
+
+Q2.How to prepare structure?
+
+Ans: Using "struct" keyword we can declare structure.
+
+syntax:
+		struct    StructureName
+		{
+			datatype   member1name;
+			datatype   member2name;
+			....
+		}variable1,variable2,variable3,variable4,variable5;
+		
+Req1:Prepare structure for Student 
+
+struct1.c:
+===========
+		#include<stdio.h>
+		#include<string.h>
+		//1.Preparing structure
+		struct    Student
+		{
+			int 	age;
+			float	height;
+			char 	name[20];
+		}s1,s2,s3,s4,s5;
+		void	main()
+		{
+			//Initializing for s1  members
+			s1.age		=14;
+			s1.height	=5.7;
+			strcpy(s1.name,"Harish");
+			//displaying s1 student details
+			printf("Age=%d,Height=%f,Name=%s\n",s1.age,s1.height,s1.name);
+		}
+
+
+
+struct2.c:
+==========
+1.Harish:
+
+	struct  ShoppingCart
+	{
+		int  	items;
+		float	price;
+		char    nameofstore[30];
+	}dmart,spencer,ratnadeep;
+	
+2.Karthik:
+	
+	struct 		Mobile
+	{
+		int  	ramsize;
+		float	cost;
+		char 	modelname[30];
+	}oppo,samsung,iphone;
+	
+3.Pradyumn:
+
+	struct 		Employee
+	{
+		int 	age;
+		float	salary;
+		char 	name[30];
+	}e1,e2,e3;
+	
+4.Roshan:
+
+	struct 		Car
+	{
+		int 	my;
+		float	price;
+		char 	modelname[30];
+	}maruthi,bmw,honda;
+
+5.Savidha:
+
+	struct    Company
+	{
+		int    	ey;
+		float	stockprice;
+		char 	nameofcompany[30];
+	}c1,c2,c3;
+
+
+struct3.c:
+==========
+PS1: Addition of 2 numbers  (twice)
+#include<stdio.h>
+struct    Addition
+{
+	int n1,n2;
+}v1,v2;
+void main()
+{	
+	int r1,r2;
+	v1.n1=10;
+	v1.n2=100;
+	r1=v1.n1+v1.n2;
+	printf("Addition=%d\n",r1);
+	
+	v2.n1=20;
+	v2.n2=200;
+	r2=v2.n1+v2.n2;
+	printf("Addition=%d\n",r2);
+}
+	
+PS2: Average of 4 numbers 	(thrice)		struct4.c
+PS3: Area of triangle	   	(twice)			struct5.c
+----------------------------------------------------------------------------------------------
+
+Struct Vs Union:
+===============
+#include<stdio.h>
+#include<conio.h>
+struct    Demo1
+{
+	int 	a;
+	char 	b;
+	float 	c;
+}v1;
+union    Demo2
+{
+    int 	a;
+	char 	b;
+	float 	c;
+}v2;
+void main()
+{
+	printf("%d \n",sizeof(v1));//7
+	printf("%d \n",sizeof(v2));//4
+}
+
+----------------------------------------------------------------------------------------------
+
+Files:
+======
+
+Operations on file
+
+	1.Opening the file
+	2.Writing data into file
+	3.Appending data into file
+	4.Reading data from file
+	5.Closing the file
+	6.Moving cursor to desired location in file
+
+
+file1.c:   Creating a file using C program
+========
+syntax to create a file pointer:
+
+	FILE   *filepointername;
+	
+syntax to create a file:
+
+	filepointername=fopen("filename.extension","mode");
+
+Code:
+
+#include<stdio.h>
+void main()
+{
+	FILE   *fp;
+	fp=fopen("biodata1.txt","w");
+	fclose(fp);
+	printf("file created successfully");
+}
+		
+file2.c: Write a c program to write your name into file.
+========
+printf()  	: Used to write data into console screen
+scanf()		: Used to read data from console screen
+
+fprintf()	: Used to write data into file
+fscanf()	: Used to read data from file
+
+
+
+#include<stdio.h>
+void main()
+{
+	FILE   *fp;
+	char  name[10]="Chanti";
+	
+	fp=fopen("biodata1.txt","w");
+	fprintf(fp,"%s",name);
+	fclose(fp);
+	printf("Write operation is done");
+}
+
+
+file3.c: Write a c program to write your name,age & height into "biodata2.txt" file.
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
