@@ -1,0 +1,97 @@
+
+file3.c: Write a c program to write your name,age & height into "biodata2.txt" file.
+=======
+#include<stdio.h>
+void main()
+{
+	FILE  *fp;
+	
+	int age=14;
+	float height=5.7;
+	char name[10]="Haresh";
+	
+	fp=fopen("biodata2.txt","w");
+	
+	fprintf(fp,"%d,%f,%s",age,height,name);
+	
+	fclose(fp);
+	
+	printf("Write operation is done");
+}
+
+
+
+file4.c: Write a c program to append your city to "biodata2.txt" file.
+=======
+
+#include<stdio.h>
+void main()
+{
+	FILE  *fp;
+	
+
+	char city[10]="Hyd";
+	
+	fp=fopen("biodata2.txt","a");
+	
+	fprintf(fp,"%s",city);
+	
+	fclose(fp);
+	
+	printf("Append operation is done");
+}
+
+file5.c: Write a c program to read data from "biodata2.txt" file.
+=======
+#include <stdio.h>
+void main()
+{
+   char ch;
+   FILE *fp;
+
+   fp = fopen("biodata2.txt", "r"); 
+ 
+  	while((ch = fgetc(fp)) != EOF)
+	{
+		printf("%c", ch);	
+	}
+   fclose(fp);
+}
+===============================================
+
+1.Pointers we used in functions  (Call By Value & Call by Address)
+2.Pointers we used in string
+3.Pointers we used in structures & unions
+
+4.Pointers we used in files
+
+5.Pointers we used in arrays (Memory Leakage Issue)
+
+#include <stdio.h>
+int main() 
+{
+    int a[4]={1,2,3,4};
+    int *p1;
+    p1=a;
+    printf("%d \n",a[0]);
+    printf("%d \n",a[1]);
+    printf("%d \n",a[2]);
+    printf("%d \n",a[3]);
+    printf("%p \n",a);      //Address of first element
+    printf("%p \n",&a[0]);  //Address of first element
+    printf("%p \n",&a[1]);  //Address of second element
+    printf("%p \n",&a[2]);  //Address of third element
+    printf("%p \n",&a[3]);  //Address of fourth element
+    printf("%p \n",p1);     //Address of first element
+    printf("%d \n",*p1);    //Value at that address
+    printf("%d \n",*(p1+1));  //Value at that address
+    printf("%d \n",*(p1+2));  //Value at that address
+    printf("%d \n",*(p1+3));  //Value at that address
+    return 0;
+}
+
+
+
+
+	
+
