@@ -1,0 +1,261 @@
+1.Pointers we used in functions  (Call By Value & Call by Address)
+2.Pointers we used in string
+3.Pointers we used in structures & unions
+4.Pointers we used in files		
+5.Pointers we used in arrays 	(Memory Leakage Issue)
+_____________________________________________________________________________________
+2.Pointers we used in string:
+=============================
+#include <stdio.h>
+int main() {
+    char name='A';
+    char name1[10]={'A','p','p','l','e','\0'};
+    char name2[10]="Apple";
+    char *name3="Apple";  //pointer used to create string
+    printf("%c\n",name);
+    printf("%s\n",name1);
+    printf("%s\n",name2);
+    printf("%s\n",name3);
+    return 0;
+}
+
+3.Pointers we used in structures & unions:
+=========================================
+Req:Addition of 2 numbers
+
+struct  Addition
+{
+	int  n1,n2;
+};
+void main()
+{
+    //Creating normal variable	
+    struct Addition v1;
+    //Creating pointer variable
+    struct Addition *v2;
+	int r1,r2;
+	v1.n1=100;
+	v1.n2=200;
+	r1=v1.n1+v1.n2;
+	printf("%d \n",r1);
+	v2->n1=1000;
+	v2->n2=2000;
+	r2=v2->n1+v2->n2;
+	printf("%d \n",r2);
+}
+
+	
+normal variable  Vs pointer variable:
+
+Normal variable holds value with in variable where as pointer variable holds address of
+value.
+
+_____________________________________________________________________________________
+
+Structure Of C program
+Comments
+	Single line
+	Multi line
+	
+C Tokens
+	Identifier
+	Literal
+	Variable
+	Constant
+	Keywords
+	Datatypes
+	Operators
+	Control Statements
+
+Format Specifiers
+	%d,%f,%c,%s,%p
+	
+Input & Output functions 
+	printf() & scanf()
+	
+Functions
+	Called & Calling
+	Argument Vs Parameters
+	Function preparation ways
+	Recursion
+	Call by value & Call by Address
+Arrays
+	One & Two
+Strings
+	7 functions
+Structures & Unions
+Files
+Pointers
+	1.Pointers we used in functions  (Call By Value & Call by Address)
+	2.Pointers we used in string
+	3.Pointers we used in structures & unions
+	4.Pointers we used in files		
+	5.Pointers we used in arrays 	(Memory Leakage Issue)
+_____________________________________________________________________________________
+	
+							C					Cpp(C Plus Plus)
+
+Why the name is 		Successor of B 			Successor of C
+
+Developer Name			Dennis Ritchie			Bjarne Stroustrup
+
+Developer Year			1972					1983
+
+Type of language		Functional PL			Functional PL + Object Oriented PL
+
+File Extension			.c 						.cpp
+
+Software				TurboC/TurboC++			TurboC++
+
+Keywords 				32 						46
+
+Input function			scanf()					cin>>
+
+Output function			printf()				cout<<
+
+Print new line 			\n 						endl
+
+
+
+I.Topics which are 	same in both languages
+
+	Structure Of program
+	Comments
+	Tokens (Identifier,Literal,	Variable,Constant,Keywords,Datatypes,Operators,Control Statements)
+	Functions
+	Arrays
+	Strings
+	Structure & Unions
+	Files
+	Pointers
+
+II.Topics which are speicific in Cpp language
+
+	Input & Output functions
+	Class & Object
+	Encapsulation
+	Inheritance
+	Polymorphism
+	Abstraction
+	Generics
+
+
+
+Basic Programs:
+===============
+#include<iostream.h>
+#include<conio.h>
+void  main()
+{
+	clrscr();
+	cout<<"Hello";
+	getch();
+}
+
+#include<iostream.h>
+#include<conio.h>
+void  main()
+{
+	int n1,n2,res;
+	clrscr();
+	cout<<"Enter n1 & n2 values:";
+	cin>>n1>>n2;
+	res=n1+n2;
+	cout<<"Addition is:"<<res;
+	getch();
+}
+
+
+#include<iostream.h>
+void main()
+{
+	float radius,result;
+	cout<<"Enter radius value:";
+	cin>>radius;
+	result=3.14*radius*radius;
+	cout<<"Area of circle is:"<<result;
+}
+
+
+#include<iostream.h>
+void main()
+{
+	float n1,result;
+	cout<<"Enter Your n1";
+	cin>>n1;
+	result=n1*n1*n1;
+	cout<<"Your result is:"<<result;
+}
+
+int main() {
+    cout << "Hello1"<<endl;
+    cout << "Hello2"<<endl;
+    cout << "Hello3"<<endl;
+    return 0;
+}
+
+
+1.Functions in Cpp
+
+void add(int a,int b)     	//Called Function
+{
+    cout<<"Addition is:"<<(a+b)<<endl;
+}
+int main() 
+{
+    add(10,20);		//Calling Function
+    add(1,2);		//Calling Function
+    return 0;
+}
+
+2.Structures and Functions in Cpp
+
+#include<iostream.h>
+#include<conio.h>
+//Declare structure
+struct Addition
+{
+    int a,b;
+}v1;
+//Defining 2 functions
+void readdatafromconsole()
+{
+    cout<<"Enter n1 & n2 values:";
+    cin>>v1.a>>v1.b;
+}
+void performaddition()
+{
+    cout<<"Addition is:"<<(v1.a+v1.b);
+}
+//Preparing main()
+void main()
+{
+	clrscr();
+	readdatafromconsole();
+	performaddition();
+	getch();
+}
+
+Task1.cpp:	Average of 4 numbers
+Task2.cpp:	Print simple interest
+
+
+3. Single pointer Vs Double pointer
+
+int main() {
+    int a=100;
+    int *p,**q;
+    p=&a;
+    q=&p;
+    cout<<a<<endl;
+    cout<<&a<<endl;
+    cout<<p<<endl;
+    cout<<*p<<endl;
+    cout<<&p<<endl;
+    cout<<q<<endl;
+    cout<<*q<<endl;
+    cout<<**q<<endl;
+    return 0;
+}
+//Single pointer stores address of another variable
+//Double pointer stores address of another address
