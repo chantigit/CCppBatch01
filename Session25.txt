@@ -1,0 +1,158 @@
+
+Program1:Addition of 2 numbers using structures & structure variable
+--------
+#include<iostream.h>
+#include<conio.h>
+struct Addition
+{
+    int a,b;
+}v1;
+void readdatafromconsole()
+{
+    cout<<"Enter n1,n2 alues:";
+    cin>>v1.a>>v1.b;
+}
+void add()
+{
+    cout<<"Addition is:"<<(v1.a+v1.b);
+}
+void main()
+{
+ clrscr();
+ readdatafromconsole();
+ add();
+ getch();
+}
+
+=======================================================
+Program2:Average of 4 numbers using structures & structure variable
+--------
+#include<iostream.h>
+#include<conio.h>
+struct Average
+{
+    int a,b,c,d;
+}v1;
+void readdatafromconsole()
+{
+    cout<<"Enter n1,n2,n3 and n4 values:";
+    cin>>v1.a>>v1.b>>v1.c>>v1.d;
+}
+void average()
+{
+    cout<<"Average is:"<<(v1.a+v1.b+v1.c+v1.d)/2;
+}
+void main()
+{
+ clrscr();
+ readdatafromconsole();
+ average();
+ getch();
+}
+====================================================
+Program3:Find simple intrest using structures & structure variable
+--------
+#include<iostream.h>
+#include<conio.h>
+struct simpleintrest
+{
+    int P,T,R;
+}v1;
+void readdatafromconsole()
+{
+    cout<<"Enter P,T and R values:";
+    cin>>v1.P>>v1.T>>v1.R;
+}
+void simpleintrest()
+{
+    cout<<"Simple Intrest is:"<<(v1.P*v1.T*v1.R)/100;
+}
+void main()
+{
+ clrscr();
+ readdatafromconsole();
+ simpleintrest();
+ getch();
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Program1:Addition of 2 numbers using Class & Object
+--------
+oops1.cpp:
+=========
+#include<iostream.h>
+#include<conio.h>
+//Preparing Class (C=A+B)  { Class =  Attributes + Behaviours }
+class Addition
+{
+	//Data 		(Attributes)
+	public : int a,b;
+	//Functions	(Behaviours)
+	public : void readdatafromconsole()
+	{
+		cout<<"Enter n1,n2 alues:"<<endl;
+		cin>>a>>b;
+	}
+	public :void add()
+	{
+		cout<<"Addition is:"<<(a+b)<<endl;
+	}
+};
+void main()
+{
+	//Preparing object for class
+	Addition  ob1,ob2;
+	clrscr();
+	//Calling functions
+	ob1.readdatafromconsole();
+	ob1.add();
+	ob2.readdatafromconsole();
+	ob2.add();
+	getch();
+}
+
+Access Modifiers inside class:
+==============================
+private 	: These members can be accessed with in current class 
+public		: These members can be accessed with in current class & outside of the class
+protected	: These members can be accessed from parent to child class  
+
+Program2(oops2.cpp):Square and Cube of a number using Class & Objects
+--------
+#include<iostream.h> 
+#include<conio.h> 
+class SquareCube
+{
+ public: int a;
+ public: void readdatafromconsole()
+ {
+  cout<<"Enter a value:";
+  cin>>a;
+ }
+ public: void square()
+ {
+  cout<<"Square is:"<<(a*a)<<endl;
+ }
+ public: void cube()
+ {
+  cout<<"Cube is:"<<(a*a*a)<<endl;
+ }
+};
+void main()
+{
+ SquareCube ob1,ob2;
+ clrscr();
+ ob1.readdatafromconsole();
+ ob1.square();
+ ob1.cube();
+ ob2.readdatafromconsole();
+ ob2.square();
+ ob2.cube();
+ getch();
+}
+
+Tasks:
+======
+oops3.cpp  :Average of 4 numbers using Class & Objects
+oops4.cpp  :Find simpleintrest using Class & Objects
+oops5.cpp  :Design calculator application using Class & Objects
