@@ -1,0 +1,196 @@
+OOPS(Object Oriented Programming Structure):
+============================================
+OOPS provides 6 principles & programmer has to follow the principles  then prepare program.
+
+
+OOPS principles:	(CO-APIE)
+=============================
+1.Class
+2.Object
+3.Encapsluation
+4.Inheritance
+5.Polymorphism
+6.Abstraction
+
+
+1.Class		:
+	It is a imaginary thing in the world which descibes A & B (Attibutes + Behaviours) of all objects
+	
+	Example1:  Flower is a class
+				Attibutes/Data			:	color,weight,breed,cost ,....
+				Behaviours/Functions	:	decoration(), garlands() , perfume() ,...
+				
+	Example2:	Fruit is a class
+				Attibutes/Data			:	color,weight,cost ,season....
+				Behaviours/Functions	:	eating(),juice(),..
+	
+	Example3:	Human is a class
+				Attibutes/Data			:	name,height,weight,age,...
+				Behaviours/Functions	:	eating(),sleeping(),walking(),..
+	
+	
+	Example4:	Addition of 2 numbers
+				Attibutes/Data			:	n1,n2
+				Behaviours/Functions	:	add()
+				
+	syntax:
+			class 	ClassName
+			{
+					AccessModifier  : Data
+					+
+					AccessModifier	: Functions
+			};
+			
+	Code:	
+			class 	Addition
+			{
+					//Data
+					public :  	int n1,n2;
+					//Constructor : Used to initilize data for object
+					public : 	Addition(int p1,int p2)
+					{
+						n1=p1;
+						n2=p2;
+					}
+					//Function
+					public :  	void add()
+								{
+									int res;
+									res=n1+n2;
+									cout<<"Sum is:"<<res<<endl;
+								}
+			};
+	
+			
+			
+2.Object	:
+	It is a physical existing thing in the world which defines A & B (Attibutes + Behaviours) 
+	
+	Example1:	If you consider Flower is a class then lilly,rose,jasmine all are objects
+	Example2:	If you consider Fruit is a class then mango,apple,banana all are objects
+	Example3:	If you consider Human is a class then roshan,chanti,karthik all are objects
+	Example4:	If you consider Addition is a class then obj1,obj2,obj3,.. all are objects
+	
+	syntax:
+			ClassName		objectname1,objectname2,..;
+	Code:
+			Addition   ob1(10,20);
+			
+			Addition   ob2(100,200);
+			
+			Addition   ob3(1000,2000);
+			
+3.Encapsluation:
+================
+Def:
+	Preparing a program by using Class{Data+Functions} is called as Encapsluation.
+	Or
+	Binding data & functions in a block/class is called as Encapsluation.
+syntax:
+			class 	ClassName
+			{
+					AccessModifier  : Data
+					+
+					AccessModifier	: Functions
+			};
+	
+1.Constructor 
+==============
+Def: Used to initilize data for object
+Def: Used to construct/allocate the memory/address for the object 
+Features:
+		1.A constructor must have same name as classname
+		2.A constructor must declare with public access modifier
+		3.A constructor automatically invoked at the time of object creation
+
+2.Destructor: 
+============
+Def: Used to destruct/de-allocate the memory/address for the object 
+Features:
+		1.A Destructor must have same name as classname & prefix must be tilde operator (~)
+		2.A Destructor must declare with public access modifier
+		3.A Destructor automatically invoked after object work completed
+		
+syntax for constructor & destructor:
+
+	class  ClassName
+	{
+		public :  ClassName(parameters)
+		{
+				//body of constructor
+		}
+		public :  ~ClassName()
+		{
+				//body of destructor
+		}
+	}
+		
+
+Access Modifiers inside class:
+==============================
+private 	: These members can be accessed with in current class 
+public		: These members can be accessed with in current class & outside of the class
+protected	: These members can be accessed from parent to child class  
+
+
+Program1(oops1.cpp):Addition of 2 numbers using Class & Object
+Program2(oops2.cpp):Square and Cube of a number using Class & Objects
+
+Tasks:
+======
+oops3.cpp  :Average of 4 numbers using Class & Objects
+oops4.cpp  :Find simpleintrest using Class & Objects
+oops5.cpp  :Design calculator application using Class & Objects
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+oops6.cpp  :  Addition of 2 numbers using Class,Constructor & Object
+
+#include<iostream.h>
+#include<conio.h>
+class 	Addition
+{
+		//Data
+		public :  	int n1,n2;
+		//Constructor 
+		public : 	Addition(int p1,int p2)
+		{
+			cout<<"*****CONSTRUCTOR*****"<<endl;
+			cout<<"Before initilize:"<<n1<<","<<n2<<endl;
+			n1=p1;
+			n2=p2;
+			cout<<"After initilize:"<<n1<<","<<n2<<endl;
+		}
+		//Function
+		public :  	void add()
+					{
+						int res;
+						res=n1+n2;
+						cout<<"Sum is:"<<res<<endl;
+					}
+		//Destructor
+		public : 	~Addition()
+		{
+			cout<<"*****DESTRUCTOR*****"<<endl;
+		}
+
+};
+void main()
+{
+	clrscr();
+	//Creating objects
+	Addition   ob1(10,20);
+	Addition   ob2(100,200);
+	Addition   ob3(1000,2000);
+	//Calling the functions
+	ob1.add();
+	ob2.add();
+	ob3.add();
+	getch();
+}
+
+Tasks:
+======
+oops7.cpp	:Square and Cube of a number using Class,Constructor,Destructor & Object
+oops8.cpp  	:Average of 4 numbers using Class,Constructor,Destructor & Object
+oops9.cpp  	:Find simpleintrest using Class,Constructor,Destructor & Object
+oops10.cpp  :Design calculator application using Class,Constructor,Destructor & Object
