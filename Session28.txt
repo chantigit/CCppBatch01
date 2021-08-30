@@ -1,0 +1,244 @@
+1.Encapsluation:
+================
+Def:
+	Binding data & functions in a block/class is called as Encapsluation.
+syntax:
+			class 	ClassName
+			{
+					AccessModifier  : Data
+					+
+					AccessModifier	: Functions
+			};
+	
+
+public and private AccessModifier:
+===================================
+#include <iostream>
+class Demo1
+{
+    int x  =100;
+    private: int y=200;
+    public: int z=300;
+    private : void sayHi()
+    {
+        std::cout <<"hi chanti"; 
+    }
+    public : void sayHello()
+    {
+        std::cout <<"hello chanti"; 
+    }
+};
+int main() 
+{
+    Demo1 ob1;
+    //std::cout <<ob1.x; //Cannot accessed
+    //std::cout <<ob1.y; //Cannot accessed
+    std::cout <<ob1.z;   //Can be accessed
+    //ob1.sayHi();      //Cannot accessed
+    ob1.sayHello();     //Can be accessed
+    return 0;
+}
+	
+2.INHERITANCE:
+==============
+1.Def:
+	Creating new class with existing class features is called as INHERITANCE.
+
+2.Representation:
+	
+	class ClassName1
+	{
+		//Parent class members
+	};
+	class ClassName2	:	ClassName1
+	{
+		//Child class members
+	};
+
+3.Rule in inheritance
+	->One class private members cannot be inherited to other classes.
+	->Cyclic INHERITANCE is not supported
+	
+4.Types of INHERITANCE:
+		1.Single Level INHERITANCE
+		2.Multi Level INHERITANCE
+		3.Heirarchical INHERITANCE
+		4.Multiple INHERITANCE
+		5.Multipath INHERITANCE
+		6.HYBRID INHERITANCE			(1+2+3+4+5)
+	
+App1:1.Single Level INHERITANCE
+
+#include <iostream>
+class Demo1
+{
+    public : void sum(int n1,int n2)
+    {
+        std::cout <<"Demo1:sum is:"<<(n1+n2)<<"\n";
+    }
+};
+class Demo2 : public Demo1
+{
+    public : void sub(int n1,int n2)
+    {
+         std::cout <<"Demo2:sub is:"<<(n1-n2)<<"\n";
+    }
+};
+int main() 
+{
+    Demo1 ob1;
+    ob1.sum(10,20);
+    Demo2 ob2;
+    ob2.sum(100,200);
+    ob2.sub(100,30);
+    return 0;
+}
+
+
+App2:2.Multi Level INHERITANCE
+
+#include <iostream>
+class Demo1
+{
+    public : void sum(int n1,int n2)
+    {
+        std::cout <<"Demo1:sum is:"<<(n1+n2)<<"\n";
+    }
+};
+class Demo2 : public Demo1
+{
+    public : void sub(int n1,int n2)
+    {
+         std::cout <<"Demo2:sub is:"<<(n1-n2)<<"\n";
+    }
+};
+class Demo3 : public Demo2
+{
+    public : void mul(int n1,int n2)
+    {
+         std::cout <<"Demo3:mul is:"<<(n1*n2)<<"\n";
+    }
+};
+int main() 
+{
+    Demo1 ob1;
+    ob1.sum(10,20);
+    Demo2 ob2;
+    ob2.sum(100,200);
+    ob2.sub(100,30);
+    Demo3 ob3;
+    ob3.mul(10,2);
+    ob3.sub(10,2);
+    ob3.sum(10,2);
+    return 0;
+}
+
+
+App3:Heirarchical INHERITANCE
+
+#include <iostream>
+class Demo1
+{
+    public : void sum(int n1,int n2)
+    {
+        std::cout <<"Demo1:sum is:"<<(n1+n2)<<"\n";
+    }
+};
+class Demo2 : public Demo1
+{
+    public : void sub(int n1,int n2)
+    {
+         std::cout <<"Demo2:sub is:"<<(n1-n2)<<"\n";
+    }
+};
+class Demo3 : public Demo1
+{
+    public : void mul(int n1,int n2)
+    {
+         std::cout <<"Demo3:mul is:"<<(n1*n2)<<"\n";
+    }
+};
+int main() 
+{
+    Demo1 ob1;
+    ob1.sum(10,20);
+    Demo2 ob2;
+    ob2.sum(100,200);
+    ob2.sub(100,30);
+    Demo3 ob3;
+    ob3.mul(10,2);
+    ob3.sum(10,2);
+    return 0;
+}
+	
+	
+App4: Multiple INHERITANCE With out Ambiguous:
+==============================================
+#include <iostream>
+class Demo1
+{
+    public : void sum1(int n1,int n2)
+    {
+        std::cout <<"Demo1:sum is:"<<(n1+n2)<<"\n";
+    }
+};
+class Demo2 
+{
+    public : void sum2(int n1,int n2)
+    {
+        std::cout <<"Demo2:sum is:"<<(n1+n2)<<"\n";
+    }
+};
+class Demo3: public Demo1,public Demo2		//No chance of ambiguous because both parents has different function names
+{};
+
+int main() 
+{
+    Demo3 ob;
+    ob.sum1(10,20);			// No ambiguous
+    ob.sum2(100,200);		// No ambiguous
+    return 0;
+}
+
+App5: Multiple INHERITANCE With Ambiguous:
+===========================================
+#include <iostream>
+class Demo1{
+    public : void sum(int n1,int n2){
+        std::cout <<"Demo1:sum is:"<<(n1+n2)<<"\n";
+    }
+};
+class Demo2 {
+    public : void sum(int n1,int n2){
+        std::cout <<"Demo2:sum is:"<<(n1+n2)<<"\n";
+    }
+};
+class Demo3: public Demo1,public Demo2 {};
+int main() {
+    Demo3 ob;
+    ob.sum(10,20); //error: request for member 'sum' is ambiguous
+    return 0;
+}
+	
+
+App6:Multipath INHERITANCE (ambiguous issue/diamond raising problem)
+====================================================================
+#include <iostream>
+class Demo1 {
+    public: void fun1(){       std::cout<<"Hi1";     }
+};
+class Demo2 : public Demo1 {
+    public: void fun2(){       std::cout<<"Hi2";     }
+};
+class Demo3 : public Demo1 {
+    public: void fun3(){       std::cout<<"Hi3";     }
+};
+class Demo4 : public Demo2,public Demo3{
+     public: void fun4(){       std::cout<<"Hi4";     }
+};
+int main() {
+    Demo4 ob;
+    ob.fun1();  //error: request for member 'fun1' is ambiguous
+    ob.fun2(); ob.fun3(); ob.fun4();
+    return 0;
+}

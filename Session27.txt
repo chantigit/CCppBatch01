@@ -1,0 +1,101 @@
+1.Encapsluation:
+================
+Def:
+	Binding data & functions in a block/class is called as Encapsluation.
+syntax:
+			class 	ClassName
+			{
+					AccessModifier  : Data
+					+
+					AccessModifier	: Functions
+			};
+	
+Types of Constructors:
+----------------------
+1.Parameterlized constructor
+	If a constructor has parameter then it said to be Parameterlized Constructor.
+Example:
+
+    public : Demo(int p1,float p2)
+    {
+        cout<<"Before-> a="<<a<<",b="<<b;
+        a=p1;
+        b=p2;
+        cout<<"After-> a="<<a<<",b="<<b;
+    }
+	
+	
+	 Demo ob1(12,9.8);
+	
+2.Non-Parameterlized constructor
+	If a constructor does not have parameter then it said to be Non-Parameterlized Constructor.
+Example:
+	public : Demo()
+    {
+        std::cout<<"Before-> a="<<a<<",b="<<b;
+        a=0;
+        b=0.0;
+        std::cout<<"After-> a="<<a<<",b="<<b;
+    }
+	
+	Demo ob1;
+
+3.Copy constructor
+	It returns copy of an object from existing object.
+Example:
+
+#include <iostream>
+class Demo {
+    public  : int a;
+    public  : float b;
+    //Parameterlized constructor
+    public : Demo(int p1,float p2)
+    {
+        a=p1;
+        b=p2;
+    }
+};
+int main() {
+    Demo ob1(12,9.8);
+    std::cout<<ob1.a<<","<<ob1.b;
+    Demo ob2=ob1;
+    std::cout<<ob2.a<<","<<ob2.b;
+    return 0;
+}
+
+Note:
+1.If user will not delcare any access modifier before data or function, then those will becomes private by default
+
+Example1:
+
+class Demo 
+	{
+				int a;
+		public  : float b;
+	}
+Here a is private & b is public
+
+Example2:
+
+class Demo 
+	{
+		public 	:	int a;
+					float b;
+	}
+	
+Here a is public & b is public
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
