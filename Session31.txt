@@ -1,0 +1,125 @@
+1.Encapsluation:
+================
+Def:
+	Binding data & functions in a block/class is called as Encapsluation.
+syntax:
+			class 	ClassName
+			{
+					AccessModifier  : Data
+					+
+					AccessModifier	: Functions
+			};
+	
+2.INHERITANCE:
+==============
+1.Def:
+	Creating new class with existing class features is called as INHERITANCE.
+
+2.Representation:
+	
+	class ClassName1
+	{
+		//Parent class members
+	};
+	class ClassName2	:	ClassName1
+	{
+		//Child class members
+	};
+
+3.POLYMORPHISM:
+===============
+	Poly		->Many 		/Multiple
+	Morphing	->Changes 	/ Forms
+
+Def:
+	Performing multiple operations having with the same name.
+
+Example:
+
+	A "payment" can be done in multiple ways (credit card/debit card/net banking/Paytm/Google Pay/...)
+
+POLYMORPHISM can be implemented by using
+	1.Function Overloading
+	2.Function Overriding
+
+====================================================================================
+4.ABSTRACTION:
+==============
+Def:
+	Abstraction is a process,where user is unaware the complex implementation detail of functionality and internal working, 
+whereas user is only able to see the basic functionalities and internal details are hidden.
+
+Abstraction is achieved by Access Modifiers inside class:
+
+	1.Private 	: members can exposed to inside class only
+	2.Protected	: member can exposed to curent class & it's child class
+	3.Public 	: members can exposed to any class
+
+--------------------------------------------------------------------------------
+Req1:Print biggest 		of 2 int,2 float,2 char.
+Req2:Print swapping 	of 2 int,2 float,2 char.
+
+
+Template Classes & Function:
+============================
+Using templates we can prepare a single function which can work with any type of data.
+
+syntax to delcare a template:
+
+	template<class TemplateVariableName>
+
+Code1:WithOut templates
+
+#include <iostream>
+class Big{
+    public : void printBigOne(int a,int b)      {
+        std::cout<<(a>b?a:b);
+    }
+    public : void printBigOne(float a,float b)  {
+        std::cout<<(a>b?a:b);
+    }
+    public : void printBigOne(char a,char b)    {
+        std::cout<<(a>b?a:b);
+    }
+};
+int main(){
+    Big ob;
+    ob.printBigOne(10,90);
+    ob.printBigOne(10.5f,9.8f);
+    ob.printBigOne('A','a');
+    return 0;
+}
+
+Code2:With templates
+
+#include <iostream>
+template<class G>
+class Big
+{
+    public : void printBigOne(G a,G b)     
+	{
+        std::cout<<(a>b?a:b);
+    }
+};
+int main(){
+    Big ob;
+    ob.printBigOne(10,90);
+    ob.printBigOne(10.5f,9.8f);
+    ob.printBigOne('A','a');
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

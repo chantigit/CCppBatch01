@@ -1,0 +1,144 @@
+1.Encapsluation:
+================
+Def:
+	Binding data & functions in a block/class is called as Encapsluation.
+syntax:
+			class 	ClassName
+			{
+					AccessModifier  : Data
+					+
+					AccessModifier	: Functions
+			};
+	
+2.INHERITANCE:
+==============
+1.Def:
+	Creating new class with existing class features is called as INHERITANCE.
+
+2.Representation:
+	
+	class ClassName1
+	{
+		//Parent class members
+	};
+	class ClassName2	:	ClassName1
+	{
+		//Child class members
+	};
+
+3.POLYMORPHISM:
+===============
+	Poly		->Many 		/Multiple
+	Morphing	->Changes 	/ Forms
+
+Def:
+	Performing multiple operations having with the same name.
+
+Example:
+
+	A "payment" can be done in multiple ways (credit card/debit card/net banking/Paytm/Google Pay/...)
+
+POLYMORPHISM can be implemented by using
+	1.Function Overloading
+	2.Function Overriding
+
+====================================================================================
+4.ABSTRACTION:
+==============
+Def:
+	Abstraction is a process,where user is unaware the complex implementation detail of functionality and internal working, 
+whereas user is only able to see the basic functionalities and internal details are hidden.
+
+Abstraction is achieved by Access Modifiers inside class:
+
+	1.Private 	: members can exposed to inside class only
+	2.Protected	: member can exposed to curent class & it's child class
+	3.Public 	: members can exposed to any class
+
+--------------------------------------------------------------------------------
+
+
+Note:
+=====
+->A template can be prepared by using 1.function & 2.class
+->Suppose if we implement templates by using function then it is called as "TemplateFunctions"
+->Suppose if we implement templates by using class then it is called as "TemplateClass"
+
+
+Req1:Print sum			of 2 int,2 float,2 char.		
+	template1.cpp	:	Using TemplateFunctions
+	template2.cpp 	:	Using TemplateClass
+Req2:Print swapping 	of 2 int,2 float,2 char.
+	template3.cpp	:	Using TemplateFunctions
+	template4.cpp 	:	Using TemplateClass
+--------------------------------------------------------------------------------
+enum1.cpp
+Month Names		:		Jan,Feb,Mar,.....			12		
+enum2.cpp	
+Week Days		:		Monday,TuesDay,...			7
+
+
+Color Names		:		Voilet,Blue,.				7
+Signal Lights	:		Red,Green,Yellow			3
+Seasons			:		Winter,Summer,Spring,Fall	4
+Gender			:		Male,Female					2
+
+
+Enums:
+======
+	Enum (enumeration) is a user-defined data type which can be assigned some limited values. 
+	These values are defined by the programmer at the time of declaring the enumerated type.
+
+syntax:
+		enum   enumname{EnumVariable1=Value,EnumVariable2=Value,.....};
+example:
+		enum 	gender{ Male=1,Female=2};
+Code1:
+
+#include <iostream>
+enum 	Gender{Male=1,Female=2};
+enum 	Color{Red,Green,Blue};
+int main() {
+    Gender  ob1,ob2;
+    ob1=Male;
+    std::cout <<ob1<<"\n";
+    ob2=Female;
+    std::cout <<ob2<<"\n";
+    Color c1;
+    c1=Red;
+    std::cout <<c1<<"\n";
+    c1=Green;
+    std::cout <<c1<<"\n";
+    return 0;
+}
+
+
+Code2:
+#include <iostream>
+enum 	Season{Winter,Summer,Spring,Fall};
+int main() {
+    int i;
+    for(i=Winter;i<=Fall;i++)
+    {
+        std::cout<<i;
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
