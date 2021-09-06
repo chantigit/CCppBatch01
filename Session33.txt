@@ -1,0 +1,96 @@
+Exceptions in Cpp:
+=================
+Error Vs Exception:
+------------------
+Error:	
+		Error is a bug which is generated at compile time(ctrl+f9) due to improper syntax
+		If error exist in code, then code cannot compiled
+	Ex:
+		; missing
+		) missing
+		vod keyword is not properly spelled
+		} missing
+		] missing
+
+Exception:
+		Exception is a bug which is generated at run time(alt+f5) due to improper logic
+		If exception exist in code, then code gets compiled but show error msg in console
+	Ex:
+		dividing a number by zero
+
+
+Q1.Can programmer handle error without touching source code ?
+Ans: No
+Q2.Can programmer handle exception without touching source code ?
+Ans: Yes, if program already used following 3 keywords
+
+		1.try
+		2.catch
+		3.throw
+
+	"try" block used to prepare code which monitoring exceptions.
+	If their exist exception in try block through "throw" keyword we have to send that exception to "catch" block.
+	If their is no exceptions the normal flow of code is executed.
+	
+syntax of try,catch & throw keywords:
+
+	try
+	{
+		throw "Exception Msg";
+	}
+	catch(Exception Variable e)
+	{
+		//handle the exception
+	}
+
+Example1:
+
+#include <iostream>
+int main() 
+{
+    int a,b,c;
+	a=100;
+	b=0;
+	try	
+	{
+		if(b==0)
+		{
+			throw "You cannot divide a number by zero";
+		}
+		else
+		{
+			c=a/b;
+			std::cout<<c;
+		}
+	}
+	catch(const char *v)
+	{
+		std::cout<<v;
+	}
+    return 0;
+}
+
+Example2:
+
+#include <iostream>
+int main() {
+    int age;
+	age=15;
+    try
+    {
+            if(age>100)
+	            throw "Age must be lesser than 100";
+        	else if(age>18)
+		        std::cout<<"Valid age for voting";
+	        else
+	            std::cout<<"Age must be greater than 18";
+    }
+    catch(const char *v)
+    {
+        std::cout<<v;
+    }
+    return 0;
+}
+
+
+
