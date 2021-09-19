@@ -1,0 +1,101 @@
+Files in Cpp:
+=============
+
+->iostreams.h is a headerfie
+
+->stream is a flow data 
+
+->iostreams is used to perform read & write operations with console screen
+	To write data into console screen cout we used 
+	To read data from console screen cin we used 
+	
+
+fstream.h headerfie provides following 2 objects to perform read & write operations with the file.
+
+
+->ofstream is a object used to perform write operation with file
+->ifstream is a object used to perform read operation on the file
+
+In C Language	:		FILE   *fp;
+						fp=fopen("data1.txt","w/r/a");
+						fp.fclose();
+
+In Cpp Language	:		To perform write
+						ofstream 	ob;
+						ob.open("data1.txt");
+						
+In Cpp Language	:		To perform read
+						ifstream 	ob;
+						ob.open("data1.txt");
+
+Program to wite & read data in file:
+====================================
+#include <fstream.h>
+#include <iostream.h>
+ 
+int main () 
+{
+   char data[100];
+
+   // open a file in write mode.
+   ofstream outfile;
+   outfile.open("afile.txt");
+
+   cout << "Writing data to the file" << endl;
+   cout << "Enter your name: "; 
+   cin.getline(data, 100);
+
+   // write inputted data into the file.
+   outfile << data << endl;
+
+   cout << "Enter your age: "; 
+   cin >> data;
+   cin.ignore();
+   
+   // again write inputted data into the file.
+   outfile << data << endl;
+
+   // close the opened file.
+   outfile.close();
+
+   // open a file in read mode.
+   ifstream infile; 
+   infile.open("afile.txt"); 
+ 
+   cout << "Reading from the file" << endl; 
+   infile >> data; 
+
+   // write the data at the screen.
+   cout << data << endl;
+   
+   // again read the data from the file and display it.
+   infile >> data; 
+   cout << data << endl; 
+
+   // close the opened file.
+   infile.close();
+
+   return 0;
+}
+
+
+File drawbacks:
+================
+1.Metadata cannot be specified
+2.Duplication is allowed
+3.Empty/Null values are valued
+4.No recovery mechanism
+5.No security mechanism (no authentication)
+6.Huge amount of data cannot be maintained
+7.Data retrival & modification is very complex
+8.Cannot make relationship between 2 files
+
+
+To resolve these drawbacks we used Databases.
+Note:
+	File store data in 		textual format.
+	Database store data in 	table format.
+
+Cell	: One intersection of row & column is called as a cell.
+Table 	: Collection interrelated rows & columns is called as Table.
+

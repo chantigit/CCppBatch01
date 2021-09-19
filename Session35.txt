@@ -1,0 +1,152 @@
+
+File drawbacks:
+================
+1.Metadata cannot be specified
+2.Duplication is allowed
+3.Empty/Null values are valued
+4.No recovery mechanism
+5.No security mechanism (no authentication)
+6.Huge amount of data cannot be maintained
+7.Data retrival & modification is very complex
+8.Cannot make relationship between 2 files
+
+
+To resolve these drawbacks we used Databases.
+Note:
+	File store data in 		textual format.
+	Database store data in 	table format.
+
+Cell		: One intersection of row & column is called as a cell.
+Table 		: Collection interrelated rows & columns is called as Table.
+Ex:
+			7thclassstudent
+			8thclassstudent
+			9thclassstudent
+
+Database	: Collection tables is called as Database
+Ex:
+		studentdb is a collection of 1st class to 10th class students tables
+		facultydb is a collection of primary school faculty & higher school faculty
+
+DatabaseServer	: Collection databases is called as DatabaseServer.
+Ex:
+			Oracle DBServer,MySql DBServer are given by Oracle
+			DB2 DBServer is given by IBM
+			SQL DBServer is given by MicroSoft
+			...
+			
+			
+DBMS :  (database management system)
+======
+DBMS is a software used to perform CRUD operations with the DatabaseServers.
+
+	C	=>	Create table & inserting rows
+	R	=>	Reading/fetching table rows
+	U	=>	Updating table rows
+	D	=>	Deleting table rows
+
+To perform above CRUD operations we require a language i.e SQL.
+
+SQL(Structural Query Langauge):
+===============================
+SQL is a Query language used to perform CRUD operations.
+Each SQL statement called as Query.
+Every Query must ends with ;
+
+
+Command1: Create 	=> Used to create empty table
+Command2: Insert	=> Used to insert 1 row into table
+Command3: Select	=> Used to fetch all rows from the table
+Command4: Update	=> Used to update the row
+Command5: Delete 	=> Used to delete the row
+
+
+Create Command:
+===============
+1.Datatypes in SQL
+						C/Cpp		SQL
+						
+	save person age		int 		integer
+	save person height	float		float
+	save person name 	char[]		varchar
+	save student grade	char 		char
+	
+NOTE:
+	To store dates we used "date" datatype.
+	
+2.Contraints in SQL
+
+	column 																			Contraint
+
+	name		:		value should not be empty & value may be duplicate			not null
+	
+	passport	:		value should not be duplicate & value may be empty			unique	
+	
+	emailid		:		value should not be duplicate & value should not be empty	primary key
+	
+	country		:		gives same value for all rows								default
+	
+	age 		:		each value must pass the condition							check 
+	
+	dob			:																	not null
+	
+	
+syntax:
+======
+	create  table  <tablename>  (
+									columnname1		datatype(size)		constraintname,
+									columnname2		datatype(size)		constraintname,
+									.....
+								);
+								
+example1: 	tablename 	: placement2021
+			columns 	: name,age,marks,emailid
+			
+create query:
+
+	create table placement2021 	(
+									name 		varchar(20)			not null,
+									age 		integer				not null check(age>0),
+									marks		integer				not null check(marks>0),
+									emailid		varchar(30)			primary key
+								);
+
+
+
+Insert Command:
+===============		
+syntax:
+		insert into <tablename> values (value1,value2,value3,...);
+
+inserting 6 rows:
+
+		insert into placement2021 values ('aadhyasri',15,450,'aadhyasri@gmail.com');
+		insert into placement2021 values ('savidha',14,320,'savidha@gmail.com');
+		insert into placement2021 values ('Haresh',14,400,'haresh@gmail.com');	
+		insert into placement2021 values ('karthik',14,400,'karthik.hemaraj@gmail.com');
+		insert into placement2021 values ('Roshaan',15,222,'roshaan@gmail.com');
+		insert into placement2021 values ('pradyumna',15,500,'varmapradyumna@gmail.com');
+		
+Select Command:
+===============		
+syntax:	
+		select  * from <tablename>;
+example:
+		select * from placement2021;
+		
+Roshan		=>	stations,city
+
+Pradymuna	=>	customer,country
+
+Karthik		=>	Customers,Buying
+
+Harish		=>	Product,Movie  (movie_id,year,name,rating)
+
+Savidha		=>	blooddonar (id,name,age,gender,phone,city)
+				employee (id,name,salary,age,city)
+
+
+
+
+		
+		
