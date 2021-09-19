@@ -1,0 +1,40 @@
+SQL:
+====
+1.how to create a table ?
+	Constraints	: not null, unique , primary key , default , check , foreign key(references)
+	Datatypes	: char,varchar,int,float
+2.how to insert rows into table ?
+3.how to update rows into table ?
+4.how to delete rows into table ?
+5.how to read/fetch/display the rows from table ?
+==================================================================
+
+primary key  Vs foreign key :
+=============================
+primary key cannot allow null values & duplicate values
+
+
+Example:	Oracle Live SQLhttps://livesql.oracle.com
+
+-- create a table1
+CREATE TABLE fridge (
+  cabin number INTEGER PRIMARY KEY,
+  item varchar(20) NOT NULL
+);
+-- create a table1
+CREATE TABLE diningtable (
+  platenumber varchar(20) PRIMARY KEY,
+  cabin INTEGER references fridge(cabinnumber)
+);
+-- insert some values
+INSERT INTO fridge VALUES (1, 'icecream');
+INSERT INTO fridge VALUES (2, 'eggs');
+INSERT INTO fridge VALUES (3,'juice');
+-- insert some values
+INSERT INTO diningtable VALUES ('plate1',1);
+INSERT INTO diningtable VALUES ('plate2',1);
+INSERT INTO diningtable VALUES ('plate3',3);
+-- fetch some values
+SELECT * FROM fridge;
+-- fetch some values
+SELECT * FROM diningtable;
